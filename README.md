@@ -31,17 +31,17 @@
         3.  Concrete mixture research /design component
         4.  Documented lab research
 5.  Reference
-    1.  [Home | ICON](https://www.iconbuild.com/)
+    1.  [ICON](https://www.iconbuild.com/)
     2.  https://mightybuildings.com/
     3.  [盈创建筑科技（上海）有限公司](http://www.winsun3d.com/)
     4.  [Peri](https://www.peri3dconstruction.com/)
     5.  **[SQ4D](https://www.sq4d.com/largest-3d-printed-home/)**
-    6.  [XtreeE | The large-scale 3d](https://xtreee.com/en/)
-    7.  [We redefine construction | CyBe Construction](https://cybe.eu/)
-    8.  [home | vertico | concrete printing](https://www.vertico.xyz/)
-    9.  [Home | apis cor](https://www.apis-cor.com/)
+    6.  [The large-scale 3d](https://xtreee.com/en/)
+    7.  [CyBe Construction](https://cybe.eu/)
+    8.  [vertico, concrete printing](https://www.vertico.xyz/)
+    9.  [apis cor](https://www.apis-cor.com/)
     10.  [Cover](https://buildcover.com/our-story)
-    11.  [About – FullStack Modular](https://www.fullstackmodular.com/about/)
+    11.  [FullStack Modular](https://www.fullstackmodular.com/about/)
 
 ![img](https://rablabgroup.larksuite.com/space/api/box/stream/download/asynccode/?code=NGYwZTI4OTNkYjRkODY3MzJjMDY1M2IyYjk3YjAyNWFfUGl5d2lxTTk4ekppZUlhSlV0NVZnTmhralh0cFFGc0RfVG9rZW46Ym94dXNyaG00clZaTjFsYmM2SmMzbnNlMWxlXzE2NDIzODU5NTE6MTY0MjM4OTU1MV9WNA)
 
