@@ -1,4 +1,7 @@
 ---
 ---
 
-@import 'jekyll-theme-cayman';
+.my-post > p img
+{
+    max-width: 100%;
+}
