@@ -1,5 +1,6 @@
 ---
 layout: home
+title: RAB-LAB
 ---
 
 ## Welcome to GitHub Pages
