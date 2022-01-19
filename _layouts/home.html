@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="my-3">
+    <a href="notes.html" class="link-secondary"><i class="bi bi-journal-richtext"></i> Meeting Notes</a>
+</div>
+{% for post in site.posts reversed %}
+<div class="card mb-3" id="{{ post.title | slugify }}">
+    <div class="card-header">
+    {{ post.title }}
+    </div>
+    <div class="card-body">
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">{{ post.excerpt }}</p>
+    <a href="{{ post.url }}" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-muted text-end">
+    {{ post.date| date: "%m/%d/%Y" }}
+    </div>
+</div>
+{% endfor %}
+{{ content }}
