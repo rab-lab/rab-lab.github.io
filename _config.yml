@@ -34,7 +34,7 @@ plugins:
 
 excerpt_separator: <!--more-->
 
-permalink: /:year/:month/:day/:title:output_ext
+permalink: /posts/:year/:month/:day/:title:output_ext
 
 # Exclude from processing.
 # The following items will not be processed, by default.
