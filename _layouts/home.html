@@ -2,7 +2,7 @@
 layout: default
 ---
 {% for post in site.posts reversed %}
-<div class="card mb-3" id="{{ post.title | slugify }}">
+<div class="card mb-3 animate__animated animate__fadeInUp animate_delay_{{ forloop.index }}s" id="{{ post.title | slugify }}">
     <div class="card-header">
     {{ post.title }}
     </div>

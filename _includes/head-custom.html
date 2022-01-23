@@ -11,4 +11,33 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
 
+<style>
+    {% assign base_delay = 0.2 %}
+    {% for post in site.posts reversed %}
+    .animate__animated.animate_delay_{{ forloop.index }}s {
+        /* -webkit-animation-delay: {{ forloop.index | times: base_delay }}s;
+        animation-delay: {{ forloop.index | times: base_delay }}s; */
+        -webkit-animation-delay: calc(var(--animate-delay) * {{ forloop.index | times: base_delay }});
+        animation-delay: calc(var(--animate-delay) * {{ forloop.index | times: base_delay }})
+    }
+    {% endfor %}
+</style>
+
+<script>
+$(document).on("scroll", function() {
+  var pageTop = $(document).scrollTop();
+  var pageBottom = pageTop + $(window).height();
+  var tags = $(".tag");
+
+  for (var i = 0; i < tags.length; i++) {
+    var tag = tags[i];
+
+    if ($(tag).position().top < pageBottom) {
+      $(tag).addClass("visible");
+    } else {
+      $(tag).removeClass("visible");
+    }
+  }
+});
+</script>
 <!-- end custom head snippets -->
