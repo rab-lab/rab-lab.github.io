@@ -1,9 +1,6 @@
 ---
 layout: default
 ---
-<div class="my-3">
-    <a href="notes.html" class="link-secondary"><i class="bi bi-journal-richtext"></i> Meeting Notes</a>
-</div>
 {% for post in site.posts reversed %}
 <div class="card mb-3" id="{{ post.title | slugify }}">
     <div class="card-header">
@@ -20,3 +17,6 @@ layout: default
 </div>
 {% endfor %}
 {{ content }}
+<div class="my-3">
+    <a href="notes.html" class="link-secondary"><i class="bi bi-journal-richtext"></i> Meeting Notes</a>
+</div>
