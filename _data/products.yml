@@ -1,0 +1,35 @@
+- name: PRODUCT_TEMPLATE_1
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel libero in leo pharetra laoreet. Pellentesque ut nibh tristique, scelerisque odio in, maximus ligula. Fusce venenatis dignissim posuere. Proin a magna eros. In tincidunt lorem quis accumsan laoreet. Integer feugiat pharetra ullamcorper. Fusce ac enim at massa tempor lacinia. Duis auctor nisi eu tempus porta. Morbi porta interdum dictum. Quisque varius sagittis efficitur. Nam fermentum ultricies tortor ut malesuada. Sed nisi nisl, lacinia eu lorem quis, dignissim commodo eros. Morbi vestibulum justo eu nulla vehicula, sed posuere odio rutrum. Nunc egestas justo quis tellus placerat consectetur. Vivamus lacinia egestas imperdiet. Nunc nec pulvinar nulla, eget vehicula enim.
+  image: /assets/images/cover2.jpg
+  extra:
+    name: bar_graph
+    items:
+    - name: Build Time
+      items:
+        - name: RAB Lab
+          value: 0.2
+        - name: Traditional Construction
+          value: 1.0
+    - name: Cost
+      items:
+        - name: RAB Lab
+          value: 0.3
+        - name: Traditional Construction
+          value: 1.0
+
+- name: PRODUCT_TEMPLATE_2
+  description: Aenean mollis lorem ipsum, et viverra tellus viverra sed. Maecenas id porttitor dolor. Cras nec tempor neque, in tempus arcu. Ut interdum imperdiet ultrices. Duis eget tortor porta, mollis arcu in, tristique purus. Cras vel vestibulum libero, eget scelerisque dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut tincidunt leo tellus, nec mollis magna mattis a. Aenean vel luctus turpis, et pretium magna. Morbi porttitor, nisi at dictum vestibulum, magna nisl sagittis massa, a varius sem est a tellus. Suspendisse pharetra malesuada enim. Nunc auctor tortor ac massa finibus, et feugiat tortor iaculis. Donec enim velit, interdum eu blandit at, cursus id magna. Phasellus aliquet fermentum sapien eget semper. Praesent ultricies vitae nisi a malesuada.
+  image: /assets/images/cover3.jpg
+
+- name: PRODUCT_TEMPLATE_3
+  description: Nam tellus quam, pellentesque eget purus hendrerit, tincidunt cursus augue. Duis condimentum eget nisl at feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam ultrices eleifend semper. Nunc venenatis quis diam a finibus. Morbi eleifend in ex at tempor. Sed vel lorem tortor. Morbi tincidunt pretium velit, ultrices pulvinar massa. Fusce nec mauris quis libero feugiat porta.
+  image: /assets/images/cover4.jpg
+
+- name: Floor Plan
+  subtitle: 2 Beds / 2 Baths
+  description: Cras ultricies luctus volutpat. Nulla facilisis varius sapien. Praesent aliquet, elit eget lobortis blandit, tortor felis feugiat tortor, vel volutpat est enim nec leo. Curabitur vulputate laoreet luctus. Praesent non sem eleifend felis convallis tincidunt eu tincidunt orci. Etiam convallis nisi non sollicitudin sodales. Cras ut tortor semper, auctor ipsum vel, iaculis nisl. Nulla dapibus, tortor vitae semper porttitor, nulla ex sollicitudin mi, tristique semper risus lorem eu risus. Proin lacinia diam at consectetur aliquam.
+  image: /assets/images/cover6.jpg
+  extra:
+    name: link
+    description: Download floor plan
+    url: https://www.google.com

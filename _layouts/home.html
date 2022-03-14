@@ -4,10 +4,9 @@ layout: default
 {% for post in site.posts reversed %}
 <div class="card mb-3 animate__animated animate__fadeInUp animate_delay_{{ forloop.index }}s" id="{{ post.title | slugify }}">
     <div class="card-header">
-    {{ post.title }}
+    {{ post.title }}&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;{{ post.date | date: "%-d %B %Y"  }}
     </div>
     <div class="card-body">
-    <h5 class="card-title">{{ post.title }}</h5>
     <p class="card-text">{{ post.excerpt }}</p>
     <a href="{{ post.url }}" class="btn btn-primary">Go somewhere</a>
     </div>

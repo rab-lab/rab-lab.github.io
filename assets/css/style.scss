@@ -6,11 +6,116 @@
     max-width: 100%;
 }
 
-.btn-primary {
-    background-color: #ff8400;
-    border-color: #ff8400;
+footer img {
+    width: 10vw;
 }
+
+footer a{
+    text-decoration: none;
+    color: rgb(112, 112, 112);
+    text-transform: uppercase;
+}
+
+footer a i{
+    color: rgb(79, 79, 79);
+}
+
+footer li{
+    font-size: small;
+    list-style: none;
+    margin: 15px;
+}
+
+nav {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
+    box-shadow: inset 0 -0.2vh 0 rgba(50,85,127,0.5), 0 0.1vh 0 rgba(50,85,127,0.5);
+    transition: box-shadow .3s;
+}
+
+  
+.navbar-light .navbar-nav .nav-link.active:hover, .navbar-light .navbar-nav .show>.nav-link:hover {
+    box-shadow: inset 0 -0.4vh 0 rgba(50,85,127,0.5), 0 0.1vh 0 rgba(50,85,127,0.5);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    transition: box-shadow .2s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .show>.nav-link:hover {
+    box-shadow: inset 0 -0.2vh 0 rgba(50,85,127,0.5), 0 0.1vh 0 rgba(50,85,127,0.5);
+}
+
+.navbar-no-shadow {
+    box-shadow: none !important;
+    transition: all .1s !important;
+}
+
+.navbar-no-shadow.active {
+    background-color: white;
+    border: 1px solid rgb(231, 231, 231) !important;
+    transition: all .3s !important;
+}
+
+.navbar-no-shadow:hover, .navbar-no-shadow.active:hover {
+    background-color: rgb(231, 231, 231);
+    border: 1px solid rgb(231, 231, 231) !important;
+    transition: all .2s !important;
+}
+
+.form-label {
+    color: rgb(104, 144, 153)
+}
+
+.form-control {
+    background-color: rgb(239, 244, 245);
+    border: none;
+}
+
+.form-control::placeholder {
+    color: rgb(195, 198, 199);
+}
+
+.btn-primary {
+    font-size: larger;
+    color: white;
+    background-color: rgb(73, 109, 138);
+    border: none;
+    text-transform: uppercase;
+    border-radius: 8px;
+}
+
 .btn-primary:hover {
-    background-color: orange;
-    border-color: orange;
+    color: white;
+    background-color: rgb(144, 173, 197);
+    border: none;
+}
+
+.card img {
+    min-height: 100%;
+    overflow: hidden; 
+    object-fit: cover;
+}
+
+.card-title {
+    color: rgb(98, 98, 98);
+    font-size: xx-large;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    font-weight: 300;
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+    color: rgb(104, 144, 153);
+}
+
+.card-text {
+    font-size: larger;
+    line-height: 2.1rem;
 }
