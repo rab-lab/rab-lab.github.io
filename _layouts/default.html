@@ -12,7 +12,7 @@
   </head>
   <body>
     {%- include header.html -%}
-    <main id="content" class="col-10 mx-auto" role="main">
+    <main id="content" class="{% if page.margin != false %}col-10{% endif %} mx-auto" role="main">
       {{ content }}
       {% include contact-form.html %}
     </main>

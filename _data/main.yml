@@ -1,0 +1,32 @@
+- name: PRODUCT_TEMPLATE_1
+  description: Aenean mollis lorem ipsum, et viverra tellus viverra sed. Maecenas id porttitor dolor. Cras nec tempor neque, in tempus arcu. Ut interdum imperdiet ultrices. Duis eget tortor porta, mollis arcu in, tristique purus. Aenean mollis lorem ipsum, et viverra tellus viverra sed. Maecenas id porttitor dolor.
+  image: /assets/images/cover3.jpg
+  extra:
+    name: link
+    description: learn more
+    url: /services
+
+- name: Why us?
+  subtitle: the best prefabricated house in new england area
+  image: /assets/images/cover2.jpg
+  extra:
+    name: bar_graph
+    items:
+    - name: Build Time
+      items:
+        - name: RAB Lab
+          value: 0.2
+        - name: Traditional Construction
+          value: 1.0
+    - name: Cost
+      items:
+        - name: RAB Lab
+          value: 0.3
+        - name: Traditional Construction
+          value: 1.0
+    - name: Quality
+      items:
+        - name: RAB Lab
+          value: 1.0
+        - name: Traditional Construction
+          value: 0.7

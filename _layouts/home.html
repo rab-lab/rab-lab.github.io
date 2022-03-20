@@ -1,21 +1,48 @@
 ---
 layout: default
 ---
-{% for post in site.posts reversed %}
-<div class="card mb-3 animate__animated animate__fadeInUp animate_delay_{{ forloop.index }}s" id="{{ post.title | slugify }}">
-    <div class="card-header">
-    {{ post.title }}&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;{{ post.date | date: "%-d %B %Y"  }}
-    </div>
-    <div class="card-body">
-    <p class="card-text">{{ post.excerpt }}</p>
-    <a href="{{ post.url }}" class="btn btn-primary">Go somewhere</a>
-    </div>
-    <div class="card-footer text-muted text-end">
-    {{ post.date| date: "%m/%d/%Y" }}
+<div class="card bg-dark text-white" style="height: 90vh;">
+    <img class="card-img" src="/assets/images/cover5.jpg">
+    <div class="card-img-overlay">
+        <div style="margin: 10%; border-left: 4px solid white; max-width: 40%;">
+            <div class="hero mx-4">
+                <p class="hero-title mb-5">Rab Lab</p>
+                <p class="hero-slogan">Smart prefab unit,</p>
+                <p class="hero-slogan">Easy build anytime</p>
+                <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan dignissim tortor ut dictum. Maecenas sodales vel turpis vel mattis. Nulla facilisi. Cras volutpat enim non ipsum sollicitudin, vel tempor nulla ultricies.</p>
+            </div>
+        </div>
+        <div style="font-size: 15vw; position: absolute; left: 40%; bottom: -10vh;">
+            <a href="#main-content" style="color: white;">
+                <i class="mt-auto bi bi-chevron-compact-down"></i>
+            </a>
+        </div>
     </div>
 </div>
-{% endfor %}
+<div id="main-content" style="margin-top: -10vh;"></div>
+<div class="col-10 mx-auto" style="margin-top: 10vh; padding-top: 5vh;">
 {{ content }}
-<div class="my-3">
-    <a href="notes.html" class="link-secondary"><i class="bi bi-journal-richtext"></i> Meeting Notes</a>
+<div class="card my-5" style="border-left: 2px solid rgb(104, 144, 153);"">
+    <div class="row my-auto">
+        <div class="col-lg-3">
+            <div class="card-body py-3 px-5" style="font-size: 1.5vh; line-height: 1.4rem;">
+                <p>Floor Area: xxx sq.ft</p>
+                <p>Bedrooms: x</p>
+                <p>Overall Dimension: xxx</p>
+                <p>Bathrooms: x</p>
+                <p>&nbsp;</p>
+                <p>Kitchen Cabinetry</p>
+                <p>Appliances</p>
+                <p>Washer & Dryer</p>
+                <p>HVAC</p>
+                <p>10 Year Warranty</p>
+                <p>Energy Efficient</p>
+                <p>Solar Panels</p>
+            </div>
+        </div>
+        <div class="col">      
+            <iframe allowfullscreen src="/panorama.html" style="height: 60vh; min-width: 60vw;"></iframe>
+        </div>
+    </div>
+</div>
 </div>

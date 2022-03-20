@@ -109,6 +109,14 @@ nav {
     font-weight: 300;
 }
 
+.card-subtitle {
+    color: rgb(98, 98, 98);
+    font-size: x-large;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: -1rem;
+}
+
 .card {
     border: none;
     border-radius: 0;
@@ -118,4 +126,24 @@ nav {
 .card-text {
     font-size: larger;
     line-height: 2.1rem;
+}
+
+.hero-title {
+    font-size: 2vh;
+    text-transform: uppercase;
+}
+
+.hero-slogan {
+    font-size: 4vh;
+    line-height: 3rem;
+    text-transform: uppercase;
+}
+
+.card-body p {
+    font-weight: 200;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }

@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+    }
+    </style>
+  </head>
+
+  <body>    
+    <script src="/assets/js/three.min.js"></script>
+    <script src="/assets/js/panolens.min.js"></script>
+    
+    <script>
+
+      var panorama, viewer, object;
+
+      viewer = new PANOLENS.Viewer();
+      panorama = new PANOLENS.ImagePanorama( 'assets/panorama/field.jpg' );
+
+      viewer.add( panorama );
+    </script>
+
+  </body>
+</html>

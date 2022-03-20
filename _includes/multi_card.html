@@ -1,0 +1,44 @@
+{% for data in include.data %}
+{% capture thecycle %}{% cycle 'even', 'odd' %}{% endcapture %}
+<div class="card my-5 animate__animated animate__fadeInUp animate_delay_{{ forloop.index }}s" style="{% if include.border != false %}border-{% if thecycle == 'even' %}left{% else %}right{% endif %}: 2px solid rgb(104, 144, 153); {% endif %}{% if include.height %}height: {{ include.height }}vh{% endif %}">
+    <div class="row my-auto">
+    {% if thecycle == 'odd' %}
+        <div class="col">
+            <img src="{{ data.image }}" class="img-fluid">
+        </div>
+    {% endif %}
+        <div class="col-lg-7">
+            <div class="card-body py-3 px-5">
+                <h3 class="card-title pb-4">{{ data.name }}</h3>
+                <h4 class="card-subtitle pb-4">{{ data.subtitle }}</h4>
+                <p class="card-text">{{ data.description }}</p>
+                {% if data.extra %}
+                {% if data.extra.name == "link" %}
+                <div class="pt-4">
+                    <button class="btn btn-primary py-2 px-3" onclick="location.href='{{ data.extra.url }}'" type="button">{{ data.extra.description }}</button>
+                </div>
+                {% endif %}
+                {% if data.extra.name == "bar_graph" %}
+                {% for item in data.extra.items %}
+                <div class="mt-5" style="color: rgb(118, 118, 118)">{{ item.name }}</div>
+                {% for object in item.items %}
+                <div style="background-color: rgb(222, 222, 222); box-shadow: 6px 6px 3px 0px rgb(230, 230, 230);">
+                <div class="mt-2 mb-3" style="background-color: rgb(104, 144, 153); width: {{ object.value | times: 100}}%; color: white; font-weight: 200">
+                    <div class="mx-2">{{ object.name }}</div>
+                </div>
+                </div>
+                {% endfor %}
+                {% endfor %}
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+{% if thecycle == 'even' %}
+        <div class="col">
+            <img src="{{ data.image }}" class="img-fluid">
+        </div>
+{% endif %}
+    </div>
+</div>
+<div class="py-5"></div>
+{% endfor %}
