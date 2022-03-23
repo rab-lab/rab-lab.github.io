@@ -4,28 +4,146 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
     <style>
         html, body {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #000;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          margin: 0;
+          background-color: #fff;
         }
-    }
+
+        #progress {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 3vh;
+        }
+
+        #bar {
+          background-color: #fff;
+          height: 100%;
+          box-shadow: 0 0 30px white;
+          transition: width 0.1s ease;
+        }
+
+        #bar.hide {
+          opacity: 0;
+          transition: opacity 1s ease;
+        }
+
+        #container {
+          width: 100%;
+          height: 100%;
+        }
+
+        button {
+          position: absolute;
+          bottom: -5.5vh;
+          width: 22%;
+          height: 15vh;
+          opacity: 40%;
+          background-size: contain;
+          border: none;
+          border-radius: 15px;
+          transition: all 0.5s;
+        }
+
+        button:hover {
+          bottom: 1.5vh;
+          opacity: 100%;
+          box-shadow: 0 0 30px white;
+        }
+
+        #btn1 {
+          left: 1%;
+          background-image: url('/assets/panorama/Panorama1-thumb.jpeg');
+        }
+
+        #btn2 {
+          left: 24.5%;
+          background-image: url('/assets/panorama/Panorama3-thumb.jpeg');
+        }
+
+        #btn3 {
+          left: 48%;
+          background-image: url('/assets/panorama/Panorama5-thumb.jpeg');
+        }
+        
+        #btn4 {
+          left: 71.5%;
+          background-image: url('/assets/panorama/Panorama6-thumb.jpeg');
+        }
     </style>
   </head>
 
   <body>    
     <script src="/assets/js/three.min.js"></script>
     <script src="/assets/js/panolens.min.js"></script>
-    
+    <div id="progress">
+      <div id="bar"></div>
+    </div>
+    <div id="container"></div>
+    <div class="buttons">
+      <button id="btn1"></button>
+      <button id="btn2"></button>
+      <button id="btn3"></button>
+      <button id="btn4"></button>  
+    </div>
     <script>
+      var panorama1, panorama2, panorama3, panorama4, viewer, container, infospot;
 
-      var panorama, viewer, object;
+      var bar = document.querySelector( '#bar' );
 
-      viewer = new PANOLENS.Viewer();
-      panorama = new PANOLENS.ImagePanorama( 'assets/panorama/field.jpg' );
+      function onProgressUpdate ( event ) {
+        var percentage = event.progress.loaded/ event.progress.total * 100;
+        bar.style.width = percentage + "%";
+        if (percentage >= 100){
+          bar.classList.add( 'hide' );
+          setTimeout(function(){
+            bar.style.width = 0;
+          }, 1000);
+        }
+      }
 
-      viewer.add( panorama );
+      container = document.querySelector( '#container' );
+
+      panorama1 = new PANOLENS.ImagePanorama( '/assets/panorama/Panorama1.png' );
+      panorama1.addEventListener( 'progress', onProgressUpdate );
+
+      panorama2 = new PANOLENS.ImagePanorama( '/assets/panorama/Panorama3.png' );
+      panorama2.addEventListener( 'progress', onProgressUpdate );
+
+      panorama3 = new PANOLENS.ImagePanorama( '/assets/panorama/Panorama5.png' );
+      panorama3.addEventListener( 'progress', onProgressUpdate );
+
+      panorama4 = new PANOLENS.ImagePanorama( '/assets/panorama/Panorama6.png' );
+      panorama4.addEventListener( 'progress', onProgressUpdate );
+
+      infospot = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
+
+      panorama1.add( infospot );
+
+      viewer = new PANOLENS.Viewer( { container: container } );
+      viewer.add( panorama1, panorama2, panorama3, panorama4 );
+      viewer.setCameraFov( 75 );
+      viewer.tweenControlCenter(new THREE.Vector3(18000, 400, 0), 0);
+
+      // Maunal Set Panorama
+      var button1 = document.querySelector( '#btn1' );
+      var button2 = document.querySelector( '#btn2' );
+      var button3 = document.querySelector( '#btn3' );
+      var button4 = document.querySelector( '#btn4' );
+
+      // Enter panorama when load completes
+      function onButtonClick( targetPanorama ) {
+        bar.classList.remove( 'hide' );
+        viewer.setPanorama( targetPanorama );
+        viewer.tweenControlCenter(new THREE.Vector3(18000, 400, 0), 0);
+      }
+
+      button1.addEventListener( 'click', onButtonClick.bind( this, panorama1 ) );
+      button2.addEventListener( 'click', onButtonClick.bind( this, panorama2 ) );
+      button3.addEventListener( 'click', onButtonClick.bind( this, panorama3 ) );
+      button4.addEventListener( 'click', onButtonClick.bind( this, panorama4 ) );
     </script>
 
   </body>
