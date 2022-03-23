@@ -9,7 +9,7 @@
             <div class="col-10">
                 <div class="{% if thecycle == 'odd' %}from-left{% else %}from-right{% endif %}" style="position: relative;">
                     <h1 class="text-uppercase {% if thecycle == 'odd' %}text-end{% else %}text-start{% endif %}">{% if data.display %}{{ data.display }}{% else %}{{ data.title }}{% endif %}</h1>
-                    <div class="mb-4" style="border-bottom: 2px solid #707070;"></div>    
+                    <div class="mb-4" style="border-bottom: 2px solid #707070;"></div>
                 </div>
                 {% if data.items %}
                 {% for item in data.items %}
