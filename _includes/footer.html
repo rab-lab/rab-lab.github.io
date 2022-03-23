@@ -1,40 +1,43 @@
 <footer class="container-fluid p-4 p-md-5 animate__animated animate__fadeInUp animate_delay_2s">
     <div class="row" style="margin-left: 2vw;">
         <div class="col-md-3 g-4">
-            <img src="/assets/images/rab-lab-logo-no-text.png" style="height: 5vw; margin-bottom: 2vw;" alt="rab lab">
+            <img src="/assets/images/rab-lab-logo-no-text.png" style="height: 80px; margin-bottom: 60px;" alt="rab lab">
             <p style="text-transform: uppercase;">Smart prefab unit, easy build anytime</p>
         </div>
         <div class="col-6 col-md-3">
             <div class="d-flex" style="height: 200px;">
                 <div class="vr d-none d-md-block"></div>
-                <div class="col m-auto ps-md-5">
-                    <a href="/rab-tech.html"><h3>RAB Techs</h3></a>
-                    {% for tech in site.data.techs %}
-                    <li><a href="/rab-tech.html#{{ tech.title | slugify }}">{{ tech.title }}</a></li>
-                    {% endfor %}
+                <div class="d-flex flex-column justify-content-between ms-5 my-3">
+                    <h3>RAB Techs</h3>
+                    <div>
+                        {% for tech in site.data.techs %}
+                        <li><a href="/rab-tech.html#{{ tech.title | slugify }}">{{ tech.title }}</a></li>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
+
         </div>
         <div class="col-6 col-md-3">
             <div class="d-flex" style="height: 200px;">
                 <div class="vr d-none d-md-block"></div>
-                <div class="col m-auto ps-md-5">
-                    <a href="/lab-projects.html"><h3>LAB Projects</h3></a>
-                    {% for project in site.data.projects %}
-                    <li><a href="/lab-projects.html#{{ project.title | slugify }}">{{ project.title }}</a></li>
-                    {% endfor %}
+                <div class="d-flex flex-column justify-content-between ms-5 my-3">
+                    <h3>LAB Projects</h3>
+                    <div>
+                        {% for project in site.data.projects %}
+                        <li><a href="/lab-projects.html#{{ project.title | slugify }}">{{ project.title }}</a></li>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-3" style="line-height: 0.5rem;">
             <div class="d-flex" style="height: 200px;">
                 <div class="vr d-none d-md-block"></div>
-                <div class="row my-auto ps-md-5 w-100">
-                    <div class="col-6 col-md-12">
+                <div class="d-flex flex-column justify-content-between ms-5 my-3">
+                    <div>
                         <!-- <p><a href="tel:+1234-567-8900">+1234-567-8900</a></p> -->
                         <p><a href="mailto:rab.lab.technology@gmail.com" style="text-transform: lowercase;">rab.lab.technology@gmail.com</a></p>
-                    </div>
-                    <div class="col-6 col-md-12">
                         <div>
                             <a href="http://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
                             <a href="http://youtube.com"><i class="bi bi-youtube"></i></a>
@@ -42,9 +45,9 @@
                             <a href="http://instagram.com"><i class="bi bi-instagram"></i></a>
                             <a href="http://linkedin.com"><i class="bi bi-linkedin"></i></a>
                         </div>
-                        <div class="pt-4">
-                            <button type="button" class="btn btn-primary w-75">Subscribe</button>
-                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <button type="button" class="btn btn-primary w-100">Subscribe</button>
                     </div>
                 </div>
             </div>

@@ -18,13 +18,23 @@
         var st = $(this).scrollTop();
         var h = $(window).height() * 0.9;
         $(".from-left").each(function() {
-            $(this).css({ 'right' : Math.max(0, 500 - (1.5 + (st - $(this).offset().top) / h) * 500) });
+            if($(this).offset().top < st + h - 100) {
+                $(this).css('right', 0)
+                $(this).css('opacity', 1)
+            }
         });
         $(".from-right").each(function() {
-            $(this).css({ 'left' : Math.max(0, 500 - (1.5 + (st - $(this).offset().top) / h) * 500) });
+            if($(this).offset().top < st + h - 100) {
+                $(this).css('left', 0)
+                $(this).css('opacity', 1)
+            }
         });
         $(".from-bottom").each(function() {
-            $(this).css({ 'top' : Math.max(0, 150 - (1.5 + (st - $(this).offset().top) / h) * 150) });
+            if($(this).offset().top < st + h + 300) {
+                $(this).css('top', 0)
+                $(this).css('margin-bottom', '0')
+                $(this).css('opacity', 1)
+            }
         });
     });
 </script>

@@ -39,7 +39,7 @@ footer li a:hover, footer a:hover, footer a i:hover {
 footer a i {
     color: white;
     margin-right: 0.4em;
-    font-size: medium;
+    font-size: large;
     transition: all .3s;
 }
 
@@ -303,4 +303,26 @@ body {
 
 p img {
     width: 80%;
+}
+
+.from-bottom {
+    position: relative;
+    top: 300px;
+    margin-bottom: -300px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.from-left {
+    position: relative;
+    right: 300px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.from-right {
+    position: relative;
+    left: 300px;
+    opacity: 0;
+    transition: all 1s;
 }

@@ -15,29 +15,9 @@ layout: base
     </div>
 </div>
 {% if page.slogan %}
-<script type="text/javascript">
-    $(window).on('scroll', function() {
-        var st = $(this).scrollTop();
-        var h = $(window).height() * 0.9;
-        $(".slogan").each(function() {
-            $(this).css({ 'opacity' : (1.5 + (st - $(this).offset().top) / h) * 1.4 - 0.4 });
-        })
-    });
-</script>
 <div class="text-center text-uppercase animate-in" style="background-color: #523DE0; color: white;">
     <h1 class="p-5 w-75 mx-auto lh-lg from-bottom slogan" style="position: relative;">{{ page.slogan }}</h1>
 </div>
-{% endif %}
-{% if page.with_animation == true %}
-<script type="text/javascript">
-    $(window).on('scroll', function() {
-        var st = $(this).scrollTop();
-        var h = $(window).height() * 0.9;
-        $(".main-content").slice(0, 2).each(function() {
-            $(this).css({ 'opacity' : (1.5 + (st - $(this).offset().top) / h) * 1.4 - 0.4 });
-        })
-    });
-</script>
 {% endif %}
 <div class="main-content {% if page.title_colored == true %}main-content-colored{% endif %} pt-3 pt-md-5 mx-auto text-center from-bottom" style="position: relative;">
     {{ content }}
