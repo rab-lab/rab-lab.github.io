@@ -17,6 +17,8 @@ layout: base
     <h1 class="p-5 w-75 mx-auto lh-lg from-bottom slogan" style="position: relative;">{{ page.slogan }}</h1>
 </div>
 {% endif %}
-<div class="main-content {% if page.title_colored == true %}main-content-colored{% endif %} pt-3 pt-md-5 mx-auto text-center from-bottom" style="position: relative;">
-    {{ content }}
+<div class="main-content {% if page.title_colored == true %}main-content-colored{% endif %} pt-3 pt-md-5 mx-auto text-center" style="position: relative;">
+    <div class="from-bottom">
+        {{ content }}
+    </div>
 </div>
