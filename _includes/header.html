@@ -72,6 +72,11 @@
   }
   $(".subscribe-dialogue").css("display", readCookie("subscribe-dialogue"))
   $(".subscribe-logo").css("display", readCookie("subscribe-logo"))
+  if(readCookie("subscribe-dialogue") == readCookie("subscribe-logo"))
+  {
+    $(".subscribe-dialogue").css("display", "block")
+    $(".subscribe-logo").css("display", "none")
+  }
 
   $(".btn-close").click(function() {
     $(".subscribe-dialogue").fadeOut(200)
