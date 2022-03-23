@@ -1,0 +1,28 @@
+<div class="py-5">
+    <script type="text/javascript">
+        $(window).on('scroll', function() {
+            var st = $(this).scrollTop();
+            var h = $(window).height() * 0.9;
+            $(".roadmap-card").each(function() {
+                $(this).css({ 'opacity' : (1.4 + (st - $(this).offset().top) / h) * 1.4 - 0.4 });
+            });
+        });
+    </script>
+    {% for data in include.data %}
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    <div class="card roadmap-card py-5 text-start" style="font-size: large;">
+        <h1 class="text-uppercase from-left py-4" style="position: relative; padding-left: 10vw; color: #523DE0;">{{ data.title }}</h1>
+        <div class="row g-5 w-100">
+            <div class="col-6 from-left" style="position: relative; padding-right: 1vh;">
+                <div class="mb-4" style="border-bottom: 3px solid #523DE0;"></div>
+                <div style="padding-left: 10vw; padding-top: 3vh;">
+                    {{ data.description }}
+                </div>
+            </div>
+            <div class="col-6 from-right" style="position: relative; padding-left: 5vh;">
+                <img src="{{ data.image }}" class="from-right" style="width: 100%; object-fit: cover; overflow: hidden; position: relative;">
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

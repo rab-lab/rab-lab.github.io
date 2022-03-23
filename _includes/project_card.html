@@ -1,0 +1,70 @@
+<div class="pt-5">
+    <script type="text/javascript">
+        $(window).on('scroll', function() {
+            var st = $(this).scrollTop();
+            var h = $(window).height() * 0.9;
+            $(".project-card").each(function() {
+                $(this).css({ 'opacity' : (1.4 + (st - $(this).offset().top) / h) * 1.4 - 0.4 });
+            });
+        });
+    </script>
+    {% for data in include.data %}
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    <div class="card project-card py-5" style="font-size: large; position: relative; bottom: 20vh; background-color: rgba(0, 0, 0, 0);" id="{{ data.title | slugify }}">
+        <div class="row g-5 w-100" style="position: relative; bottom: -20vh;">
+            {% if thecycle == 'even' %}
+            <div class="col p-0"></div>
+            {% endif %}
+            <div class="col-10">
+                <div class="{% if thecycle == 'odd' %}from-left{% else %}from-right{% endif %}" style="position: relative;">
+                    <h1 class="text-uppercase {% if thecycle == 'odd' %}text-end{% else %}text-start{% endif %}">{% if data.display %}{{ data.display }}{% else %}{{ data.title }}{% endif %}</h1>
+                    <div class="mb-4" style="border-bottom: 2px solid #707070;"></div>    
+                </div>
+                {% if data.items %}
+                {% for item in data.items %}
+                <div class="row g-0 py-5 text-start">
+                    <div class="col-1 {% if thecycle == 'even' %}order-last{% endif %}"></div>
+                    <div class="col">
+                        <img src="{{ item.image }}" class="img-fluid {% if thecycle == 'odd' %}from-left{% else %}from-right{% endif %}" style="position: relative;">
+                    </div>
+                    <div class="col-4 {% if thecycle == 'even' %}order-first{% endif %} {% if thecycle == 'odd' %}from-right{% else %}from-left{% endif %}" style="position: relative;">
+                        <h2 class="text-uppercase py-2">{{ item.title }}</h2>
+                        <div class="mb-5" style="border-bottom: 1px solid #707070;"></div>
+                        <div class="my-5 m{% if thecycle == 'odd' %}s{% else %}e{% endif %}-5">
+                            {{ item.description }}
+                        </div>
+                        {% if item.extra %}
+                        <button class="btn btn-primary my-5 py-3 px-5" onclick="location.href='{{ item.extra.url }}'" type="button">{{ item.extra.description }}</button>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <div class="d-flex flex-row g-5 text-start">
+                    {% if thecycle == 'odd' %}
+                    <div class="col-1"></div>
+                    {% else %}
+                    <div class="col-4 {% if thecycle == 'odd' %}from-right{% else %}from-left{% endif %}" style="position: relative;">
+                        {{ data.description }}
+                    </div>
+                    {% endif %}
+                    <div class="col px-5">
+                        <img src="{{ data.image }}" class="{% if thecycle == 'odd' %}from-left{% else %}from-right{% endif %}" style="width: 100%; object-fit: cover; overflow: hidden; position: relative;">
+                    </div>
+                    {% if thecycle == 'odd' %}
+                    <div class="col-4 {% if thecycle == 'odd' %}from-right{% else %}from-left{% endif %}" style="position: relative;">
+                        {{ data.description }}
+                    </div>
+                    {% else %}
+                    <div class="col-1"></div>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+            {% if thecycle == 'odd' %}
+            <div class="col p-0"></div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,16 @@
+<div class="card my-5">
+    <div class="from-left" style="margin-left: -8vw; width: 40%; border-bottom: 2px solid black; position: relative;"></div>
+    <div class="card-body py-3 ps-5">
+        <div class="row pt-5 pb-3">
+            <div class="col-4 from-left" style="position: relative;">
+                <div style="margin-right: 5vw;">
+                    {{ include.content.description }}
+                </div>
+                <button class="btn btn-primary my-5 py-3 w-75" onclick="location.href='{{ include.content.link }}'" type="button">{{ include.content.link_description }}</button>
+            </div>
+            <div class="col-8 from-right" style="position: relative;">
+                <img class="img-fluid" src="{{ include.content.image }}" style="width: 100%">
+            </div>
+        </div>
+    </div>
+</div>

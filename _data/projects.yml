@@ -1,0 +1,21 @@
+- title: Commercial Building
+  display: Warehouse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retail Building&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pop up Store
+  description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos wadawdawdwadwadwadwadwadwadwadwadwadwadwadwadwadawdwadwaddwadawdwadwadwadwadwadwadd
+  image: /assets/images/cover1.jpg
+
+- title: Residential Housing
+  items:
+  - title: Key Features
+    description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    image: /assets/images/cover2.jpg
+  - title: Floor Plan
+    description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    image: /assets/images/cover4.jpg
+    extra:
+      type: link
+      description: Download floor plan
+      url: https://www.google.com
+
+- title: Partnership Projects
+  description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos wadawdawdwadwadwadwadwadwadwadwadwadwadwadwadwadawdwadwaddwadawdwadwadwadwadwadwadd
+  image: /assets/images/cover3.jpg

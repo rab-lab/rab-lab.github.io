@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(50px); -webkit-backdrop-filter: blur(50px);">
   <div class="container-fluid pt-3">
-    <a class="navbar-brand px-5" href="{{ site.url }}">
-      <img src="/assets/images/RAB LAB LOGO_Trans.png" alt="" style="height: 10vh; margin-top: -3vh; margin-bottom: -3vh;">
+    <a class="navbar-brand px-5 py-4" href="{{ site.url }}">
+      <img src="/assets/images/rab-lab-logo.png" alt="" style="height: 3vh; margin-top: -3vh; margin-bottom: -1.8vh;">
     </a>
     <div class="d-flex">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,22 +10,84 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-5">
           <li class="nav-item px-3">
-            <a class="nav-link {% if page.title == "RAB-LAB" %}active" aria-current="page{% endif %}" href="/index.html">Home</a>
+            <a class="nav-link {% if page.title == "Rab Tech" %}active" aria-current="page{% endif %}" href="/rab-tech.html">Rab Tech</a>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link {% if page.title == "Products" %}active" aria-current="page{% endif %}" href="/products.html">Products</a>
+            <a class="nav-link {% if page.title == "Lab Projects" %}active" aria-current="page{% endif %}" href="/lab-projects.html">Lab Project</a>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link {% if page.title == "Services" %}active" aria-current="page{% endif %}" href="/services.html">Services</a>
+            <a class="nav-link {% if page.title == "Road Map" %}active" aria-current="page{% endif %}" href="/roadmap.html">Roadmap</a>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link {% if page.title == "About" %}active" aria-current="page{% endif %}" href="/about.html">About</a>
+            <a class="nav-link {% if page.title == "About Us" %}active" aria-current="page{% endif %}" href="/about.html">About</a>
           </li>
-          <li class="nav-item px-4 py-1">
-            <a class="navbar-no-shadow nav-link {% if page.title == "Contact Us" %}active" aria-current="page{% endif %}" href="/contact.html"  style="padding: 3px 12px; border: 1px solid rgb(181, 181, 181);">Contact Us</a>
+          <li class="nav-item px-3">
+            <a class="nav-link {% if page.title == "Contact Us" %}active" aria-current="page{% endif %}" href="/contact.html" style="color: #523de0">Contact Us</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
 </nav>
+<div class="subscribe-dialogue" style="position: fixed; z-index: 100; right: 4vw; bottom: 8vh; width: 435px; height: 85px; background-color: white; border-radius: 10px; border: 2px solid #eee; display: none;">
+  <div style="padding: 8.5px 14.5px;">
+    <div class="d-flex justify-content-between">
+      <p style="color: #523de0;">Subscribe</p>
+      <button type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+    <form action="https://formspree.io/f/mjvloqqb" method="POST" style="margin-top: -12px;">
+      <div class="d-flex flex-row" style="height: 35px;">
+        <input type="email" class="form-control" style="border-radius: 7px 0 0 7px; border-width: 1pt;" name="email" placeholder="Enter your Email" required>
+        <button type="submit" class="btn btn-primary" style="width: 6vw; border-radius: 0 7px 7px 0;">
+          <img src="/assets/images/mail.png" style="height: 18px; margin-top: -8px;">
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<button class="subscribe-logo" style="position: fixed; z-index: 100; right: 4vw; bottom: 8vh; width: 85px; height: 85px; border-radius: 42.5px; background-color: #523de0; border: none; display: none;">
+  <img src="/assets/images/mail.png" style="height: 35px;">
+</button>
+<script>
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  function createCookie(name, value, days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        var expires = "; expires=" + date.toGMTString();
+    }
+    else var expires = "";               
+
+    document.cookie = name + "=" + value + expires + "; path=/";
+  }
+  $(".subscribe-dialogue").css("display", readCookie("subscribe-dialogue"))
+  $(".subscribe-logo").css("display", readCookie("subscribe-logo"))
+
+  $(".btn-close").click(function() {
+    $(".subscribe-dialogue").fadeOut(200)
+    $(".subscribe-logo").fadeIn(200)
+    createCookie("subscribe-dialogue", "none", 30)
+    createCookie("subscribe-logo", "block", 30)
+  })
+  var delay = 400, setTimeoutConst;
+  $(".subscribe-logo").hover(function() {
+    setTimeoutConst = setTimeout(function() {
+      $(".subscribe-logo").fadeOut(200)
+      $(".subscribe-dialogue").fadeIn(200)
+      createCookie("subscribe-dialogue", "block", 30)
+      createCookie("subscribe-logo", "none", 30)
+    }, delay);
+  }, function() {
+    clearTimeout(setTimeoutConst);
+  });
+</script>

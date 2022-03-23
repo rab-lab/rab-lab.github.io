@@ -1,0 +1,26 @@
+<div class="pt-5">
+    <script type="text/javascript">
+        $(window).on('scroll', function() {
+            var st = $(this).scrollTop();
+            var h = $(window).height() * 0.9;
+            $(".about-card").each(function() {
+                $(this).css({ 'opacity' : (1.4 + (st - $(this).offset().top) / h) * 1.4 - 0.4 });
+            });
+        });
+    </script>
+    {% for data in include.data %}
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    <div class="card about-card py-5 from-bottom" style="font-size: large; position: relative;">
+        <div class="w-50 text-uppercase">
+            <h2 style="color: #523DE0; font-size: xx-large;">{{ data.title }}</h2>
+            <div class="my-3" style="border-bottom: 3px solid #523DE0;"></div>    
+        </div>
+        <div class="row g-5 py-3">
+            <div class="col-4"></div>
+            <div class="col-7">
+                <img src="{{ data.image }}" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

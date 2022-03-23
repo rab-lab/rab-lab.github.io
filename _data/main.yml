@@ -1,32 +1,44 @@
-- name: PRODUCT_TEMPLATE_1
-  description: Aenean mollis lorem ipsum, et viverra tellus viverra sed. Maecenas id porttitor dolor. Cras nec tempor neque, in tempus arcu. Ut interdum imperdiet ultrices. Duis eget tortor porta, mollis arcu in, tristique purus. Aenean mollis lorem ipsum, et viverra tellus viverra sed. Maecenas id porttitor dolor.
-  image: /assets/images/cover3.jpg
-  extra:
-    name: link
-    description: learn more
-    url: /services
-
-- name: Why us?
-  subtitle: the best prefabricated house in new england area
+card:
+- description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos wadawdawdwadwadwadwadwadwadwadwadwadwadwadwadwadawdwadwaddwadawdwadwadwadwadwadwadd
+  link: /rab-tech.html
+  link_description: View Rab Tech
   image: /assets/images/cover2.jpg
-  extra:
-    name: bar_graph
-    items:
-    - name: Build Time
-      items:
-        - name: RAB Lab
-          value: 0.2
-        - name: Traditional Construction
-          value: 1.0
-    - name: Cost
-      items:
-        - name: RAB Lab
-          value: 0.3
-        - name: Traditional Construction
-          value: 1.0
-    - name: Quality
-      items:
-        - name: RAB Lab
-          value: 1.0
-        - name: Traditional Construction
-          value: 0.7
+- description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos wadawdawdwadwadwadwadwadwadwadwadwadwadwadwadwadawdwadwaddwadawdwadwadwadwadwadwadd
+  link: /lab-projects.html
+  link_description: Learn more
+  image: /assets/images/cover2.jpg
+
+chart:
+  description: We are the best in the Northeast region
+  items:
+  - description: build time
+    icon: bi-clock-fill
+    value: 3X faster
+  - description: cost
+    icon: bi-currency-dollar
+    value: 30% off
+  - description: quality
+    icon: bi-shield-fill
+    value: 30% off
+  - description: sustainability
+    icon: bi-tree-fill
+    value: 30% off
+
+_3D:
+  values:
+  - description: Floor Area
+    value: xxx sq.ft
+  - description: Overall Dimension
+    value: xx' x xx'
+  - description: Bedrooms
+    value: x
+  - description: Bathrooms
+    value: x
+  features:
+  - description: Kichent Cabinetry
+  - description: Appliances
+  - description: Washer & Dryer
+  - description: HVAC
+  - description: 10 Year Warranty
+  - description: Energy Efficient
+  - description: Solar Panels (optional)

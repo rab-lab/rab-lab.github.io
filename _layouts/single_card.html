@@ -1,17 +1,14 @@
 ---
-layout: default
+layout: base
 ---
-<div class="card my-5 animate__animated animate__fadeInUp animate_delay_0.5s" style="border-left: 2px solid rgb(104, 144, 153);">
+<div class="card my-5" style="border-left: 2px solid rgb(104, 144, 153);">
     <div class="card-body py-3 ps-5">
-        <h3 class="card-title pb-4">{{ page.subtitle }}</h3>
+        <h3 class="card-title pb-4">{{ include.title }}</h3>
         <div class="row pt-5 pb-3">
-            {% assign content_no_space = content | strip_newlines %}
-            {% if content_no_space != "" %}
             <div class="col">
-                {{ content }}
+                {{ include.content }}
             </div>
-            {% endif %}
-            <img class="col" src="{{ page.image }}" style="width: 100%">
+            <img class="col" src="{{ include.image }}" style="width: 100%">
         </div>
     </div>
 </div>

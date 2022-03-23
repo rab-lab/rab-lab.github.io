@@ -1,38 +1,54 @@
-<footer class="mt-4 container-fluid px-5 animate__animated animate__fadeInUp animate_delay_2s" style="background-color: #eff4f5; color: rgb(101, 101, 101);">
-    <div class="row align-items-center p-5">
-        <div class="col-1 d-none d-md-block">
+<footer class="container-fluid p-4 p-md-5 animate__animated animate__fadeInUp animate_delay_2s">
+    <div class="row" style="margin-left: 2vw;">
+        <div class="col-md-3 g-4">
+            <img src="/assets/images/rab-lab-logo-no-text.png" style="height: 5vw; margin-bottom: 2vw;" alt="rab lab">
+            <p style="text-transform: uppercase;">Smart prefab unit, easy build anytime</p>
         </div>
-        <div class="col d-none d-md-block">
-            <img src="/assets/images/RAB LAB LOGO_Trans.png" alt="rab lab" style="margin:-40px 0;">
-            <p style="font-size: x-small;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel libero in leo pharetra laoreet.</p>
-        </div>
-        <div class="col-1 d-none d-md-block">
-            <div class="d-flex" style="height: 80px;">
-                <div class="vr"></div>
+        <div class="col-6 col-md-3">
+            <div class="d-flex" style="height: 200px;">
+                <div class="vr d-none d-md-block"></div>
+                <div class="col m-auto ps-md-5">
+                    <a href="/rab-tech.html"><h3>RAB Techs</h3></a>
+                    {% for tech in site.data.techs %}
+                    <li><a href="/rab-tech.html#{{ tech.title | slugify }}">{{ tech.title }}</a></li>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-        <div class="col">
-            <li><a href="{{ site.url }}/products.html"">Products</a></li>
-            <li><a href="{{ site.url }}/services.html"">Services</a></li>
-            <li><a href="{{ site.url }}/about.html"">About</a></li>
-            <li><a href="{{ site.url }}/contact.html"">Contact Us</a></li>
-        </div>
-        <div class="col-1 d-none d-md-block">
-            <div class="d-flex" style="height: 80px;">
-                <div class="vr"></div>
+        <div class="col-6 col-md-3">
+            <div class="d-flex" style="height: 200px;">
+                <div class="vr d-none d-md-block"></div>
+                <div class="col m-auto ps-md-5">
+                    <a href="/lab-projects.html"><h3>LAB Projects</h3></a>
+                    {% for project in site.data.projects %}
+                    <li><a href="/lab-projects.html#{{ project.title | slugify }}">{{ project.title }}</a></li>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-        <div class="col" style="font-size: x-small; line-height: 0.5rem;">
-            <p><a href="tel:+1234-567-8900">+1234-567-8900</a></p>
-            <p><a href="mailto:xxx@xxx.com">xxx@xxx.com</a></p>
-            <p style="font-size: x-large;">
-                <a href="http://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="http://youtube.com"><i class="bi bi-youtube"></i></a>
-                <a href="http://tiktok.com"><i class="bi bi-tiktok"></i></a>
-                <a href="http://instagram.com"><i class="bi bi-instagram"></i></a>
-                <a href="http://linkedin.com"><i class="bi bi-linkedin"></i></a>
-            </p>
-            <p style="color: lightgray;">Copyrights @2022 RAB Lab</p>
+        <div class="col-12 col-md-3" style="line-height: 0.5rem;">
+            <div class="d-flex" style="height: 200px;">
+                <div class="vr d-none d-md-block"></div>
+                <div class="row my-auto ps-md-5 w-100">
+                    <div class="col-6 col-md-12">
+                        <p><a href="tel:+1234-567-8900">+1234-567-8900</a></p>
+                        <p><a href="mailto:xxx@xxx.com">xxx@xxx.com</a></p>
+                    </div>
+                    <div class="col-6 col-md-12">
+                        <div>
+                            <a href="http://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="http://youtube.com"><i class="bi bi-youtube"></i></a>
+                            <a href="http://tiktok.com"><i class="bi bi-tiktok"></i></a>
+                            <a href="http://instagram.com"><i class="bi bi-instagram"></i></a>
+                            <a href="http://linkedin.com"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                        <div class="pt-4">
+                            <button type="button" class="btn btn-primary w-75">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <p style="color: lightgray;">Copyrights @2022 RAB Lab</p>
     </div>
 </footer>

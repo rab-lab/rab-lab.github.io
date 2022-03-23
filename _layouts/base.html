@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    {% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include head-custom.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  </head>
+  <body>
+    {%- include header.html -%}
+    <div style="width: 100vw;">
+      <div class="preload main-preload">
+        <img src="/assets/images/cover2.jpg" style="height: 90vh;">
+      </div>
+      <div class="preload rab-tech-preload">
+        <img src="/assets/images/cover2.jpg">
+      </div>
+      <div class="preload lab-projects-preload">
+        <img src="/assets/images/cover5.jpg">
+      </div>
+      <div class="preload roadmap-preload">
+        <img src="/assets/images/cover6.jpg">
+      </div>
+      <div class="preload about-preload">
+        <img src="/assets/images/cover6.jpg">
+      </div>
+    </div>
+    <main id="content" class="mx-auto" role="main">
+      {{ content }}
+      {%- include footer.html -%}
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+      $(".preload").css("top", $(".navbar").outerHeight())
+      $("a").click(function(event) {
+          event.preventDefault();
+          linkLocation = this.href;
+          if(linkLocation.split('#')[0] != location.origin + location.pathname)
+          {
+            if(linkLocation.split('/')[2] == location.origin.split('/')[2] && !linkLocation.includes('#'))
+            {
+              var links = linkLocation.split('#')[0].split('/')
+              switch(links[links.length - 1].split('.')[0]) {
+                case "":
+                  $(".main-preload:hidden").fadeIn(500)
+                  break;
+                case "rab-tech":
+                  $(".rab-tech-preload:hidden").fadeIn(500)
+                  break;
+                case "lab-projects":
+                  $(".lab-projects-preload:hidden").fadeIn(500)
+                  break;
+                case "roadmap":
+                  $(".roadmap-preload:hidden").fadeIn(500)
+                  break;
+                case "about":
+                  $(".about-preload:hidden").fadeIn(500)
+                  break;
+                }
+              $("main").fadeOut(500, function(){redirectPage(linkLocation)});
+            }
+            else
+            {
+              $("body").fadeOut(300, function(){redirectPage(linkLocation)});
+            }
+          }
+          else {
+            redirectPage(linkLocation)
+          }
+      });
+  
+      function redirectPage(link) {
+          document.location.href = link;
+      }
+    </script>
+  </body>
+</html>

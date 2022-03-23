@@ -1,0 +1,52 @@
+<div class="pt-5">
+    <script type="text/javascript">
+        $(window).on('scroll', function() {
+            var st = $(this).scrollTop();
+            var h = $(window).height() * 0.9;
+            $(".tech-card").each(function() {
+                $(this).css({ 'opacity' : (1.2 + (st - $(this).offset().top) / h) * 1.4 - 0.4 });
+            })
+        });
+    </script>
+    {% for data in include.data %}
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    <div class="card tech-card" style="position: sticky; top: 8vh;" id="{{ data.title | slugify }}">
+        <div class="row g-0" style="height: 90vh;">
+        {% if thecycle == 'even' %}
+            <div class="col-12 col-md-6 col-lg-7" style="z-index: 1;">
+                <img src="{{ data.image }}" class="img-fluid">
+            </div>
+        {% endif %}
+            <div class="col-12 col-md-6 col-lg-5 text-{% if thecycle == 'odd' %}start{% else %}end{% endif %}" style="background-color: #523DE0;">
+                <div class="row mx-0" style="margin-top: 15vh;">
+                    {% if thecycle == 'odd'%}
+                    <div class="col p-0">
+                        <div style="top: 12vh; height: 15vh; width: 7.5vh; background-color: white; border-radius: 0 7.5vh 7.5vh 0; position: absolute"></div>
+                        <span style="font-size: 4vh; position: absolute; top: 16.5vh; left: 2vh; color: #523DE0">{{ forloop.index }}</span>
+                    </div>
+                    {% endif %}
+                    <div class="col-9">
+                        <div class="card-body py-3" style="color: white; margin: -40px;">
+                            <h3 class="card-title pb-2" style="padding-{% if thecycle == 'odd' %}right{% else %}left{% endif %}: 10vh !important;">{{ data.title }}</h3>
+                            <div style="border-bottom: 2px solid white;"></div>
+                            <p class="card-text px-0" style="padding-top: 10vh; padding-{% if thecycle == 'odd' %}right{% else %}left{% endif %}: 10vh !important;">{{ data.description }}</p>
+                        </div>
+                    </div>
+                    {% if thecycle == 'even'%}
+                    <div class="col p-0">
+                        <div style="top: 12vh; height: 15vh; width: 7.5vh; background-color: white; border-radius: 7.5vh 0 0 7.5vh; right: 0vh; position: absolute"></div>
+                        <span style="font-size: 4vh; position: absolute; top: 16.5vh; right: 2vh; color: #523DE0; overflow: hidden;">{{ forloop.index }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% if thecycle == 'odd' %}
+            <div class="col-12 col-md-6 col-lg-7">
+                <img src="{{ data.image }}" class="img-fluid">
+            </div>
+        {% endif %}
+        </div>
+    </div>
+    <!-- <div class="py-5"></div> -->
+    {% endfor %}
+</div>

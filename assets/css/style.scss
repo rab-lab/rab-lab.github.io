@@ -7,46 +7,86 @@
 }
 
 footer img {
-    width: 10vw;
+    height: 10vh;
 }
 
-footer a{
-    text-decoration: none;
-    color: rgb(112, 112, 112);
-    text-transform: uppercase;
-}
-
-footer a i{
-    color: rgb(79, 79, 79);
-}
-
-footer li{
+footer {
+    background-color: #2E2E37;
+    color: white;
     font-size: small;
+}
+
+footer h3 {
+    font-size: 1em;
+    margin-bottom: 1.8em;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+
+footer li a {
+    transition: all .3s;
+}
+
+footer li a:hover, footer a:hover, footer a i:hover {
+    color: #7c6be7;
+    transition: all .3s;
+}
+
+footer a i {
+    color: white;
+    margin-right: 0.4em;
+    font-size: medium;
+    transition: all .3s;
+}
+
+footer li {
+    font-size: x-small;
     list-style: none;
-    margin: 15px;
+    margin-top: 15px;
+}
+
+footer p a {
+    font-size: x-small;
 }
 
 nav {
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 1.2vw;
 }
 
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
-    box-shadow: inset 0 -0.2vh 0 rgba(50,85,127,0.5), 0 0.1vh 0 rgba(50,85,127,0.5);
-    transition: box-shadow .3s;
+    text-decoration: underline;
+    text-underline-offset: .4em;
+    text-decoration-thickness: .12em;
+    text-decoration-color: #523DE0;
+    // box-shadow: inset 0 -0.2vh 0 #523DE0, 0 0.1vh 0 #523DE0;
+    transition: all .3s;
 }
 
   
 .navbar-light .navbar-nav .nav-link.active:hover, .navbar-light .navbar-nav .show>.nav-link:hover {
-    box-shadow: inset 0 -0.4vh 0 rgba(50,85,127,0.5), 0 0.1vh 0 rgba(50,85,127,0.5);
+    text-decoration: underline;
+    text-underline-offset: .3em;
+    text-decoration-thickness: .18em;
+    text-decoration-color: #523DE0;
+    // box-shadow: inset 0 -0.4vh 0 #523DE0, 0 0.1vh 0 #523DE0;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    transition: box-shadow .2s;
+    text-underline-offset: .4em;
+    transition: all .2s;
 }
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .show>.nav-link:hover {
-    box-shadow: inset 0 -0.2vh 0 rgba(50,85,127,0.5), 0 0.1vh 0 rgba(50,85,127,0.5);
+    text-decoration: underline;
+    text-decoration-thickness: .12em;
+    text-decoration-color: #523DE0;
+    // box-shadow: inset 0 -0.2vh 0 #523DE0, 0 0.1vh 0 #523DE0;
 }
 
 .navbar-no-shadow {
@@ -82,7 +122,7 @@ nav {
 .btn-primary {
     font-size: larger;
     color: white;
-    background-color: rgb(73, 109, 138);
+    background-color: #523DE0;
     border: none;
     text-transform: uppercase;
     border-radius: 8px;
@@ -90,7 +130,21 @@ nav {
 
 .btn-primary:hover {
     color: white;
-    background-color: rgb(144, 173, 197);
+    background-color: #7c6be7;
+    border: none;
+}
+
+.btn-light {
+    font-size: larger;
+    color: #523DE0;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 8px;
+}
+
+.btn-light:hover {
+    color: #523DE0;
+    background-color: #EEE;
     border: none;
 }
 
@@ -120,7 +174,7 @@ nav {
 .card {
     border: none;
     border-radius: 0;
-    color: rgb(104, 144, 153);
+    // color: rgb(104, 144, 153);
 }
 
 .card-text {
@@ -129,8 +183,10 @@ nav {
 }
 
 .hero-title {
-    font-size: 2vh;
+    font-size: 8vw;
     text-transform: uppercase;
+    line-height: 4.5vw;
+    padding-top: 3vw;
 }
 
 .hero-slogan {
@@ -146,4 +202,104 @@ nav {
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.main-content h1 {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.main-content p {
+    text-transform: uppercase;
+    padding: 10pt 8vw;
+    line-height: 30pt;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.tech-card .card-title {
+    text-decoration: none;
+    line-height: 2;
+    color: white;
+    font-size: 3vh;
+}
+
+.tech-card .card-text {
+    font-size: medium;
+    line-height: 1.8;
+}
+
+.project-card h1 {
+    color: #523DE0;
+    font-weight: normal;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    // overflow-y: scroll;
+}
+
+.main-content-colored h1 {
+    color: #523DE0 !important;
+    text-decoration: underline;
+    text-underline-offset: 0.5vh;
+    text-decoration-color: black;
+}
+
+.animate-in {
+    -webkit-animation: fadeIn .5s;
+    animation: fadeIn .5s;
+}
+
+.animate-out {
+    -webkit-transition: opacity .8s;
+    transition: opacity .8s;
+    opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.preload {
+    position: fixed;
+}
+
+.preload img {
+    object-fit: cover;
+    width: 100vw;
+    height: 65vw;
+}
+
+.main-preload {
+    display: none;
+}
+
+.rab-tech-preload {
+    display: none;
+}
+
+.lab-projects-preload {
+    display: none;
+}
+
+.roadmap-preload {
+    display: none;
+}
+
+.about-preload {
+    display: none;
+}
+
+p img {
+    width: 80%;
 }
