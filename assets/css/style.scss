@@ -272,12 +272,13 @@ body {
 
 .preload {
     position: fixed;
+    top: 0px;
 }
 
 .preload img {
     object-fit: cover;
     width: 100vw;
-    height: 95vh;
+    height: 100vh;
 }
 
 .main-preload {

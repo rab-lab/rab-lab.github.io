@@ -29,7 +29,7 @@
                         <div class="card-body py-3" style="color: white; margin: -40px;">
                             <h3 class="card-title pb-2" style="padding-{% if thecycle == 'odd' %}right{% else %}left{% endif %}: 10vh !important;">{{ data.title }}</h3>
                             <div style="border-bottom: 2px solid white;"></div>
-                            <p class="card-text px-0" style="padding-top: 10vh; padding-{% if thecycle == 'odd' %}right{% else %}left{% endif %}: 10vh !important;">{{ data.description }}</p>
+                            <p class="card-text px-0" style="padding-top: 10vh; padding-{% if thecycle == 'odd' %}right{% else %}left{% endif %}: 10vh !important; text-transform: none; font-size: larger">{{ data.description }}</p>
                         </div>
                     </div>
                     {% if thecycle == 'even'%}

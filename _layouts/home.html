@@ -10,59 +10,61 @@ layout: base
         })
     });
 </script>
-<div class="card bg-dark text-white" style="height: 95vh;">
+<div class="card bg-dark text-white" style="height: 100vh; margin-top: -100px;">
     <img class="card-img" src={{ page.image }}>
     <div class="animate-in" style="position: absolute; top: 10vw; width: 80%; background-color: rgba(50, 50, 50, 0.5); left: -10%; border-radius: 2vh;">
         <div class="hero" style="padding: 5vw; padding-left: 20vw;">
             <p style="font-size: 2vw">{{ page.subtitle }}</p>
             <div style="margin-right: 8vw; border-bottom: 2px solid white;"></div>
             <p style="font-size: 3.3vw; text-transform: uppercase;">{{ page.title2 }}</p>
-            <p style="margin-right: 20vw;">{{ page.description }}</p>
+            <p style="margin-right: 20vw; font-size: large;">{{ page.description }}</p>
         </div>
     </div>
 </div>
 <div id="main-content" style="margin-top: -10vh;"></div>
-<div class="col-11 mx-auto" style="margin-top: 10vh; padding-top: 10vh;">
-    <h1 class="from-left m-content" style="margin-left: 3vw; text-transform: uppercase; position: relative; margin-bottom: 5vw;">{{ page.slogan }}</h1>
+<div class="col-9 mx-auto" style="margin-top: 10vh; padding-top: 10vh;">
+    <h1 class="from-left m-content" style="margin-left: 3vw; text-transform: uppercase; position: relative; margin-bottom: 5vw; line-height: 1.8em;">{{ page.slogan }}</h1>
     {% assign zero = site.data.main.card[0] %}
     {% include single_card.html content=zero %}
 </div>
-<div style="background-color: #F0F0F0; text-transform: uppercase;">
+<div style="background-color: #F0F0F0; text-transform: uppercase; padding-left: 10%;">
     <div class="from-right m-content" style="position: relative;">
-        <h1 class="text-end" style="padding: 5vw;">{{ site.data.main.chart.description }}</h1>
+        <h1 class="text-end" style="padding: 5vw; padding-right: 10%;">{{ site.data.main.chart.description }}</h1>
         <div style="margin-left: 8vw; margin-top: -2vw; border-bottom: 2px solid black;"></div>
-        <div style="margin-left: 6vw; margin-right: 4vw; padding-bottom: 2vw; color: white;">
+        <div style="margin-left: 6vw; margin-right: 4vw; padding-bottom: 2vw; color: white; padding-right: 5%;">
             <div class="row">
             {% for item in site.data.main.chart.items %}
-            <div class="col" style="height: 15vw; background-color: #2E2E37; margin: 2vw; margin-top: 5vw; border-radius: 1vw;">
+            <div class="col" style="height: 200px; background-color: #2E2E37; margin: 2vw; margin-top: 5vw; border-radius: 1vw;">
                 <div style="margin: 1vw;">
                     <i class="bi {{ item.icon }}" style="font-size: 3vw; margin-right: 1vw;"></i>
-                    <span style="font-size: 1.2vw; bottom: 0.3vw; position: relative; font-weight: 200;">{{ item.description }}</span>
+                    <span style="font-size: 14px; bottom: 0.3vw; position: relative; font-weight: 200;">{{ item.description }}</span>
                 </div>
-                <div style="text-align: center; font-size: 3vw; padding-top: 2vw;">{{ item.value }}</div>
+                <div class="d-flex flex-column justify-content-center" style="text-align: center; height: 100px; font-size: 25pt; margin-top: -10px;">
+                    <div>{{ item.value }}</div>
+                </div>
             </div>
             {% endfor %}
             </div>
         </div>
     </div>
 </div>
-<div class="col-11 mx-auto">
+<div class="col-9 mx-auto">
     {% assign one = site.data.main.card[1] %}
     {% include single_card.html content=one %}
     <div class="card my-5">
         <div class="from-left m-content" style="margin-left: -8vw; border-bottom: 2px solid black; position: relative;"></div>
         <div class="card-body py-3 ps-5">
             <div class="row pt-5 pb-3 mt-5">
-                <div class="col-3 from-left py-3 m-content" style="position: relative;">
-                    <div style="margin-right: 5vw; font-size: 1.5vh; line-height: 1.4rem;">
+                <div class="col-4 from-left py-3 m-content" style="position: relative;">
+                    <div style="margin-right: 5vw; font-size: 16px; line-height: 1.4rem;">
                         <div style="margin-bottom: 5vw;">
                             {% for item in site.data.main._3D.values %}
-                            <p>{{ item.description }}: {{ item.value }}</p>
+                            <p class="my-2">{{ item.description }}: {{ item.value }}</p>
                             {% endfor %}
                         </div>
                         <div>
                             {% for item in site.data.main._3D.features %}
-                            <p>{{ item.description }}</p>
+                            <p class="my-2">{{ item.description }}</p>
                             {% endfor %}
                         </div>
                     </div>
@@ -75,7 +77,7 @@ layout: base
                         </div>
                     </div>
                 </div>
-                <div class="col-9 from-right m-content p-0" style="position: relative;">
+                <div class="col-8 from-right m-content p-0" style="position: relative;">
                     <iframe class="pano" allowfullscreen src="/panorama.html" style="height: 100%; width: 100%;"></iframe>
                 </div>
             </div>
@@ -83,6 +85,6 @@ layout: base
     </div>
 </div>
 <div class="text-center text-uppercase animate-in pd-0" style="background-color: #523DE0; color: white;">
-    <h1 class="p-5 w-75 mx-auto lh-lg from-bottom slogan" style="position: relative;">Ready to get started?</h1>
-    <button class="btn btn-light mt-3 py-3 w-25" onclick="location.href='/contact.html'" type="button" style="margin-bottom: 60pt;">Get in touch</button>
+    <h1 class="pt-5 w-75 mx-auto lh-lg from-bottom slogan" style="position: relative;">Ready to get started?</h1>
+    <button class="btn btn-light py-3 mt-3 w-25 from-bottom" onclick="location.href='/contact.html'" type="button" style="margin-bottom: 80pt; position: relative;">Get in touch</button>
 </div>

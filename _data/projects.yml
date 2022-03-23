@@ -1,15 +1,16 @@
 - title: Commercial Building
   display: Warehouse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retail Building&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pop up Store
-  description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos wadawdawdwadwadwadwadwadwadwadwadwadwadwadwadwadawdwadwaddwadawdwadwadwadwadwadwadd
-  image: /assets/images/cover1.jpg
+  description: This mobile printed housing prototype quickly adapts to any built environment and requirements. The sectional strategy discretizes the residential spaces into mortgages of life. In this autonomous system, 3D printed concrete modules are prefabricated by robotic arms, transported, and assembled on-site. Each slice of the structure is printable and ready to be assembled with the controlled location of sections. The design empowers communities with a holistic technological solution that reduces labor and carbon emissions.
+  image: /assets/images/Image11.png
 
 - title: Residential Housing
   items:
   - title: Key Features
-    description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-    image: /assets/images/cover2.jpg
+    description: By implementing the innovative low-carbon concrete material, optimizing essential structural forms, and adopting the robotics fabrication system, the 3D printed urban blocks can reduce 30% of overall material waste and increase 80% manufacturing efficiency to achieve the most sustainable and efficient adaptability. The team offers more freedom to bespoke forms and advanced parametric designs by utilizing the technology.
+    image: /assets/images/Image17.png
   - title: Floor Plan
-    description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    description: "1F 510 sq.ft.<br/>2F367 sq.ft.<br/>Overall Dimensions: 24' x 49<br/>Bedrroms: 2<br/>Bathrooms: 2<br/>Integrated Appliances<br/>HVAC<br/>Energy Efficient<br/>Solar Panels"
+    subtitle: 2 Beds / 2 Baths, 877 sq. ft.
     image: /assets/images/cover4.jpg
     extra:
       type: link
@@ -17,5 +18,5 @@
       url: https://www.google.com
 
 - title: Partnership Projects
-  description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos wadawdawdwadwadwadwadwadwadwadwadwadwadwadwadwadawdwadwaddwadawdwadwadwadwadwadwadd
-  image: /assets/images/cover3.jpg
+  description: The urban furniture prototypes can easily adapt to any built environment. With low carbon 3D printed concrete technology, structural algorithm optimization, and adopting the robotics fabrication system, Urban Blocks’ form can be positioned and combined for different purposes—single bench, double-side bench, sofas, planters, and variations in-between. The geometry and scale of the mobile units permit easy assemblies to fit the human body. This design aims to empower the communities by prefabricating urban blocks and to open up countless possibilities to populate our public spaces.
+  image: /assets/images/furniture.jpg

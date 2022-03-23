@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Rab Tech
-image: /assets/images/cover2.jpg
+image: /assets/images/table.jpg
 with_animation: true
 ---
 # Integrated management system
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+Rab Lab is a “Robotics 3D Printing as a Service” company, and our technology can step in at any point when customers want to do cost-efficient constructions. From design, fabrication, assembly, and inspection, we are smart and sustainable at every step.
 
 ![](/assets/images/techs.png)
 

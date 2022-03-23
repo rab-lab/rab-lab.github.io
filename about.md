@@ -7,6 +7,6 @@ with_animation: true
 ---
 # Our Mission
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+We, RAB Lab, facilitate robotics fabrication of 3D printed housing units with the autonomous design system and adaptive components made of sustainable structural materials. Our mission is to accelerate buildings to simple fast assembly and achieve easy build anywhere, anytime. 
 
 {% include about_card.html data=site.data.about %}

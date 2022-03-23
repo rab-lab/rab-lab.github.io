@@ -29,7 +29,8 @@
                     </div>
                     <div class="col-4 {% if thecycle == 'even' %}order-first{% endif %} {% if thecycle == 'odd' %}from-right{% else %}from-left{% endif %}" style="position: relative;">
                         <h2 class="text-uppercase py-2">{{ item.title }}</h2>
-                        <div class="mb-5" style="border-bottom: 1px solid #707070;"></div>
+                        <div style="border-bottom: 1px solid #707070;"></div>
+                        <h4 class="text-uppercase py-2">{{ item.subtitle }}</h4>
                         <div class="my-5 m{% if thecycle == 'odd' %}s{% else %}e{% endif %}-5">
                             {{ item.description }}
                         </div>
