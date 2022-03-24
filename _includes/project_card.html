@@ -9,7 +9,8 @@
             <div class="col-10 px-0">
                 <div class="{% if thecycle == 'odd' %}from-left{% else %}from-right{% endif %}" style="position: relative; margin: 0 -3vw;">
                     <h1 class="text-uppercase {% if thecycle == 'odd' %}text-end{% else %}text-start{% endif %}">{% if data.display %}{{ data.display }}{% else %}{{ data.title }}{% endif %}</h1>
-                    <div class="mb-4" style="border-bottom: 2px solid #707070;"></div>
+                    <div class="mb-2" style="border-bottom: 2px solid #707070;"></div>
+                    <h4 class="text-uppercase pb-4 {% if thecycle == 'odd' %}text-end{% else %}text-start{% endif %}">{{ data.subtitle }}</h4>
                 </div>
                 {% if data.items %}
                 {% for item in data.items %}
@@ -26,7 +27,9 @@
                             {{ item.description }}
                         </div>
                         {% if item.extra %}
-                        <button class="btn btn-primary my-5 py-3 px-5" onclick="location.href='{{ item.extra.url }}'" type="button">{{ item.extra.description }}</button>
+                        <a href="{{ item.extra.url }}" download="rab-lab-plan">
+                            <button class="btn btn-primary my-5 py-3 px-5">{{ item.extra.description }}</button>
+                        </a>
                         {% endif %}
                     </div>
                 </div>
@@ -36,7 +39,7 @@
                     {% if thecycle == 'odd' %}
                     <div class="col-1"></div>
                     {% else %}
-                    <div class="col-4 {% if thecycle == 'odd' %}from-right{% else %}from-left{% endif %}" style="position: relative;">
+                    <div class="col-4 from-left" style="position: relative; padding-right: 3vw">
                         {{ data.description }}
                     </div>
                     {% endif %}
@@ -44,7 +47,7 @@
                         <img src="{{ data.image }}" class="{% if thecycle == 'odd' %}from-left{% else %}from-right{% endif %}" style="width: 100%; object-fit: cover; overflow: hidden; position: relative;">
                     </div>
                     {% if thecycle == 'odd' %}
-                    <div class="col-4 {% if thecycle == 'odd' %}from-right{% else %}from-left{% endif %}" style="position: relative;">
+                    <div class="col-4 from-right" style="position: relative; padding-left: 3vw">
                         {{ data.description }}
                     </div>
                     {% else %}

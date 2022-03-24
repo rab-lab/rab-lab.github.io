@@ -7,16 +7,29 @@
   items:
   - title: Key Features
     description: By implementing the innovative low-carbon concrete material, optimizing essential structural forms, and adopting the robotics fabrication system, the 3D printed urban blocks can reduce 30% of overall material waste and increase 80% manufacturing efficiency to achieve the most sustainable and efficient adaptability. The team offers more freedom to bespoke forms and advanced parametric designs by utilizing the technology.
-    image: /assets/images/Image17.jpeg
+    image: /assets/images/features.jpg
   - title: Floor Plan
     description: "1F 510 sq.ft.<br/>2F367 sq.ft.<br/>Overall Dimensions: 24' x 49<br/>Bedrroms: 2<br/>Bathrooms: 2<br/>Integrated Appliances<br/>HVAC<br/>Energy Efficient<br/>Solar Panels"
     subtitle: 2 Beds / 2 Baths, 877 sq. ft.
-    image: /assets/images/cover4.jpg
+    image: /assets/images/plan.png
     extra:
       type: link
       description: Download floor plan
-      url: https://www.google.com
+      url: /assets/images/plan.jpg
 
 - title: Partnership Projects
-  description: The urban furniture prototypes can easily adapt to any built environment. With low carbon 3D printed concrete technology, structural algorithm optimization, and adopting the robotics fabrication system, Urban Blocks’ form can be positioned and combined for different purposes—single bench, double-side bench, sofas, planters, and variations in-between. The geometry and scale of the mobile units permit easy assemblies to fit the human body. This design aims to empower the communities by prefabricating urban blocks and to open up countless possibilities to populate our public spaces.
+  subtitle: Urban Blocks, Bench Module, Grey
+  description: "Technology:
+<br/>- Autonomous Manufacture, 
+<br/>- Robotics fabrication, 
+<br/>- Bespoke Parametric Design
+<br/>
+<br/>Material: 
+<br/>- Low-Carbon 3D Printed Concrete
+<br/>
+<br/>Overall Dimensions: 
+<br/>- 2' x 2.5' x 2' (Each Unit), 
+<br/>- 2' x 5' x 2' (Bench Module)
+<br/>
+<br/>The urban furniture prototypes can easily adapt to any built environment. With low carbon 3D printed concrete technology, structural algorithm optimization, and adopting the robotics fabrication system, Urban Blocks’ form can be positioned and combined for different purposes—single bench, double-side bench, sofas, planters, and variations in-between. The geometry and scale of the mobile units permit easy assemblies to fit the human body. This design aims to empower the communities by prefabricating urban blocks and to open up countless possibilities to populate our public spaces."
   image: /assets/images/furniture.jpg

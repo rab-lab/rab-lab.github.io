@@ -6,12 +6,15 @@
             <h2 style="color: #523DE0; font-size: xx-large;">{{ data.title }}</h2>
             <div class="my-3" style="border-bottom: 3px solid #523DE0;"></div>    
         </div>
+        {% for image in data.images %}
         <div class="row g-5 py-3">
-            <div class="col-4"></div>
-            <div class="col-7">
-                <img src="{{ data.image }}" class="img-fluid">
+            <div class="col-2"></div>
+            <div class="col-9">
+                <img src="{{ image.url }}" class="img-fluid w-100 py-5">
+                <div class="my-5" style="border-bottom: 2px solid black; margin-right: -30vw"></div>    
             </div>
         </div>
+        {% endfor %}
     </div>
     {% endfor %}
 </div>

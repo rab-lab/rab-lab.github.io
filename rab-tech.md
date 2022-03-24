@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Rab Tech
-image: /assets/images/table.jpg
+image: /assets/images/tech-color.jpg
 with_animation: true
 ---
 # Integrated management system

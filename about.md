@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About Us
-image: /assets/images/cover6.jpg
+image: /assets/images/about-us.jpg
 title_colored: true
 with_animation: true
 ---

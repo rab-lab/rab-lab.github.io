@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Road Map
-image: /assets/images/cover6.jpg
+image: /assets/images/roadmap.jpg
 ---
 
 {% include roadmap_card.html data=site.data.roadmap %}
