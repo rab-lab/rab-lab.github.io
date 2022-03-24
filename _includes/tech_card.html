@@ -1,7 +1,8 @@
 <div class="pt-5">
     {% for data in include.data %}
     {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
-    <div class="card tech-card" id="{{ data.title | slugify }}">
+    <div id="{{ data.title | slugify }}" style="position: relative; top: -400px;"></div>
+    <div class="card tech-card">
         <div class="row g-0" style="height: calc(100vh - 100px);">
         {% if thecycle == 'even' %}
             <div class="col-12 col-md-6 col-lg-7">
