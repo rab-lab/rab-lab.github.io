@@ -17,7 +17,7 @@
                 <div class="row g-0 py-5 text-start">
                     <div class="col-1 {% if thecycle == 'even' %}order-last{% endif %}"></div>
                     <div class="col">
-                        <img src="{{ item.image }}" class="img-fluid {% if thecycle == 'odd' %}from-left{% else %}from-right{% endif %}" style="position: relative;">
+                        <img src="{{ item.image }}" class="img-fluid {% if thecycle == 'odd' %}from-left{% else %}from-right{% endif %}" style="position: relative; object-fit: contain;">
                     </div>
                     <div class="col-4 {% if thecycle == 'even' %}order-first{% endif %} {% if thecycle == 'odd' %}from-right{% else %}from-left{% endif %}" style="position: relative;">
                         <h2 class="text-uppercase py-2">{{ item.title }}</h2>
