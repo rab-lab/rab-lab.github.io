@@ -25,12 +25,12 @@ layout: base
         <div style="margin-left: 6vw; margin-right: 4vw; padding-bottom: 2vw; color: white; padding-right: 5%;">
             <div class="row">
             {% for item in site.data.main.chart.items %}
-            <div class="col" style="height: 180px; background-color: #2E2E37; margin: 2vw; margin-top: 5vw; border-radius: 1vw;">
+            <div class="col d-flex flex-column justify-content-between" style="height: 12.5vw; background-color: #2E2E37; margin: 2vw; margin-top: 5vw; border-radius: 1vw; padding-bottom: 1vw;">
                 <div style="margin: 5px;">
                     <i class="bi {{ item.icon }}" style="font-size: 40px; margin-right: 3px;"></i>
                     <span style="font-size: 14px; bottom: 0.3vw; position: relative; font-weight: 200;">{{ item.description }}</span>
                 </div>
-                <div class="d-flex flex-column justify-content-center" style="text-align: center; height: 100px; font-size: 25pt; padding: 10px 5px;">{{ item.value }}</div>
+                <div class="d-flex flex-column justify-content-center" style="text-align: center; height: 7vw; font-size: 2vw;">{{ item.value }}</div>
             </div>
             {% endfor %}
             </div>
