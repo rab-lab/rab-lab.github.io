@@ -328,3 +328,20 @@ p img {
     opacity: 0;
     transition: all 1s;
 }
+
+.image-popup-area {
+    height: 100vh; 
+    // width: none; 
+    margin: auto; 
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.image-popup {
+    object-fit: cover;
+    // width: 100%;
+    margin: 10vh auto;
+    display: block;
+    height: 80vh;
+    box-shadow: 10px 10px 5vh #333;
+}

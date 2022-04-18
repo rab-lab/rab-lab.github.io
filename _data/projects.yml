@@ -9,6 +9,13 @@
     type: image_gallery
     description: By implementing the innovative low-carbon concrete material, optimizing essential structural forms, and adopting the robotics fabrication system, the 3D printed urban blocks can reduce 30% of overall material waste and increase 80% manufacturing efficiency to achieve the most sustainable and efficient adaptability. The team offers more freedom to bespoke forms and advanced parametric designs by utilizing the technology.
     image: /assets/images/features.jpg
+    items:
+    - /assets/images/Image21.jpeg
+    - /assets/images/Image23.jpeg
+    - /assets/images/Image17.jpeg
+    - /assets/images/Image18.jpeg
+    - /assets/images/Image10.jpeg
+    - /assets/images/Image22.jpeg
   - title: Floor Plan
     description: "1F 510 sq.ft.<br/>2F367 sq.ft.<br/>Overall Dimensions: 24' x 49<br/>Bedrroms: 2<br/>Bathrooms: 2<br/>Integrated Appliances<br/>HVAC<br/>Energy Efficient<br/>Solar Panels"
     subtitle: 2 Beds / 2 Baths, 877 sq. ft.
