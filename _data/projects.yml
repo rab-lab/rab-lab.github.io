@@ -6,6 +6,7 @@
 - title: Residential Housing
   items:
   - title: Key Features
+    type: image_gallery
     description: By implementing the innovative low-carbon concrete material, optimizing essential structural forms, and adopting the robotics fabrication system, the 3D printed urban blocks can reduce 30% of overall material waste and increase 80% manufacturing efficiency to achieve the most sustainable and efficient adaptability. The team offers more freedom to bespoke forms and advanced parametric designs by utilizing the technology.
     image: /assets/images/features.jpg
   - title: Floor Plan

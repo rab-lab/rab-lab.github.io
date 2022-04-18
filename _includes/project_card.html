@@ -16,10 +16,10 @@
                 {% for item in data.items %}
                 <div class="row g-0 py-5 text-start" style="margin: 0 -3vw">
                     <div class="col-1 {% if thecycle == 'even' %}order-last{% endif %}"></div>
-                    <div class="col">
+                    <div class="col{% if item.type == "image_gallery" %}-11{% endif %}">
                         <img src="{{ item.image }}" class="img-fluid {% if thecycle == 'odd' %}from-left{% else %}from-right{% endif %}" style="position: relative; object-fit: contain;">
                     </div>
-                    <div class="col-4 {% if thecycle == 'even' %}order-first{% endif %} {% if thecycle == 'odd' %}from-right{% else %}from-left{% endif %}" style="position: relative;">
+                    <div class="col-{% if item.type == "image_gallery" %}11{% else %}4{% endif %} {% if thecycle == 'even' %}order-first{% endif %} {% if thecycle == 'odd' %}from-right{% else %}from-left{% endif %}" style="position: relative;">
                         <h2 class="text-uppercase py-2">{{ item.title }}</h2>
                         <div style="border-bottom: 1px solid #707070;"></div>
                         <h4 class="text-uppercase py-2">{{ item.subtitle }}</h4>
