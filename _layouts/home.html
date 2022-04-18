@@ -1,9 +1,9 @@
 ---
 layout: base
 ---
-<div class="card bg-dark text-white" style="height: 100vh; margin-top: -110px;">
+<div class="card bg-dark text-white" style="height: 100vh; margin-top: -80px;">
     <img class="card-img" src={{ page.image }}>
-    <div class="animate-in" style="position: absolute; top: calc(10vw + 110px); width: 80%; background-color: rgba(50, 50, 50, 0.5); left: -10%; border-radius: 2vh;">
+    <div class="animate-in" style="position: absolute; top: calc(25vh + 40px); width: 80%; background-color: rgba(50, 50, 50, 0.5); left: -10%; border-radius: 2vh;">
         <div class="hero" style="padding: 4vw; padding-left: 20vw;">
             <p style="font-size: 2vw">{{ page.subtitle }}</p>
             <div style="margin-right: 8vw; border-bottom: 2px solid white;"></div>
@@ -13,8 +13,8 @@ layout: base
     </div>
 </div>
 <div id="main-content" style="margin-top: -10vh;"></div>
-<div class="col-9 mx-auto" style="margin-top: 10vh; padding-top: 10vh;">
-    <h1 class="from-left" style="margin-left: 3vw; text-transform: uppercase; position: relative; margin-bottom: 5vw; line-height: 1.8em; font-weight: 300;">{{ page.slogan }}</h1>
+<div class="col-9 mx-auto" style="margin-top: 10vh; padding-top: 7vh;">
+    <h1 class="from-left" style="margin-left: 3vw; text-transform: uppercase; position: relative; margin-bottom: 8vh; line-height: 1.8em; font-weight: 300;">{{ page.slogan }}</h1>
     {% assign zero = site.data.main.card[0] %}
     {% include single_card.html content=zero %}
 </div>
@@ -64,19 +64,19 @@ layout: base
                         <div style="margin-top: 3vw; border-radius: 50%; height: 15vw; width: 15vw; background-color: #523DE0; color: white;">
                             <p style="padding-top: 6.2vw; font-size: 1.8vw; text-align: center; text-transform: uppercase;">View 3D Tour</p>
                         </div>
-                        <div style="margin-top: 10.3vw; margin-left: -0.4vw; color: #523DE0;">
+                        <div style="margin-top: 8.3vw; margin-left: -0.4vw; color: #523DE0;">
                             <i class="bi bi-arrow-right" style="font-size: 3vw;"></i>
                         </div>
                     </div>
                 </div>
                 <div class="col-8 from-right p-0" style="position: relative;">
-                    <iframe class="pano" allowfullscreen src="/panorama.html" style="height: 100%; width: 100%;"></iframe>
+                    <iframe class="pano" allowfullscreen src="/panorama.html" style="height: min(100%, 80vh); width: 100%;"></iframe>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="text-center text-uppercase animate-in pd-0 pb-5" style="background-color: #523DE0; color: white;">
+<div class="text-center text-uppercase animate-in pd-0 pb-5 pt-5" style="background-color: #523DE0; color: white;">
     <h1 class="pt-5 w-75 mx-auto lh-lg slogan" style="position: relative;">Ready to get started?</h1>
-    <button class="btn btn-light py-3 mt-3 w-25" onclick="location.href='/contact.html'" type="button" style="position: relative;">Get in touch</button>
+    <button class="btn btn-light py-3 mt-3 w-25 mb-5" onclick="location.href='/contact.html'" type="button" style="position: relative;">Get in touch</button>
 </div>
