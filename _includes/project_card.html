@@ -14,7 +14,7 @@
                 </div>
                 {% if data.items %}
                 {% for item in data.items %}
-                <div class="row g-0 py-5 text-start">
+                <div class="row g-0 py-5 text-start" style="margin: 0 -3vw">
                     <div class="col-1 {% if thecycle == 'even' %}order-last{% endif %}"></div>
                     <div class="col">
                         <img src="{{ item.image }}" class="img-fluid {% if thecycle == 'odd' %}from-left{% else %}from-right{% endif %}" style="position: relative; object-fit: contain;">
